@@ -2,6 +2,10 @@
 title = "Arch Installation"
 description = "The Adventure of Installing Arch."
 date = 2023-12-31
+draft = false
+
+[taxonomies]
+tags = ["linux", "installation"]
 +++
 
 ## Story

@@ -3,11 +3,11 @@
 <header id="site-header" class="animated slideInUp faster">
   <div class="hdr-wrapper section-inner">
     <div class="hdr-left">
-      <div class="site-branding">
+      <!-- <div class="site-branding">
         <a href="{{ config.base_url}}">{{ config.title }}</a>
-      </div>
+      </div> -->
       <nav class="site-nav hide-in-mobile">
-        {% for menu_item in config.extra.hermit_menu %}
+        {% for menu_item in config.extra.main_menu %}
         <a href="{{ menu_item.link }}">{{ menu_item.name }}</a>
         {% endfor %}
       </nav>
@@ -39,7 +39,7 @@
 </header>
 <div id="mobile-menu" class="animated fast">
   <ul>
-    {% for menu_item in config.extra.hermit_menu %}
+    {% for menu_item in config.extra.main_menu %}
     <li><a href="{{ menu_item.link }}">{{ menu_item.name }}</a></li>
     {% endfor %}
   </ul>
