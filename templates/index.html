@@ -2,58 +2,26 @@
 
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta itemprop="name" content="{{config.title}}" />
-  <meta itemprop="description" content="{{config.description}}" />
-
-  <link rel="apple-touch-icon" sizes="180x180" href="{{get_url(path="apple-touch-icon.png")}}"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="{{get_url(path="favicon-32x32.png")}}" />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="{{get_url(path="favicon-16x16.png")}}"
-  />
-  <link
-    rel="shortcut icon"
-    href="{{get_url(path="favicon.ico")}}"
-  />
-  <link rel="stylesheet" href="{{get_url(path="style.css")}}"/>
-  {% if page.title %}
-  <title>{{page.title}}</title>
-  {% else %}
-  <title>{{config.title}}</title>
-  {% endif %}
-
-  {% if config.generate_feed %}
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=config.feed_filename, trailing_slash=false) }}">
-  {% endif %}
-</head>
+  <head> {% include "partials/head.html" %} </head>
 
   <body id="page">
-
-	{% block header %}
-	{% endblock header %}
+	{% block header %} {% endblock header %}
 	
 	{% block title %}
 	<div id="spotlight" class="animated fadeIn">
 	  <div id="home-center">
-		<h1 id="home-title">{{section.title}}</h1>
-		<p id="home-subtitle">{{section.description}}</p>
-		<div id="home-social">
-		  {{macros::render_social_icons()}}
-		</div>
-		{% endblock title %}
-		{% block main %}
-		<nav id="home-nav" class="site-nav">
-		  {% for s in config.extra.main_menu %}
-		  <a href="{{config.base_url ~ s.link}}">{{s.name}}</a>
-		  {% endfor %}
-		</nav>
-		{% endblock main %}
+      <nav id="home-nav" class="site-nav">
+        {% for s in config.extra.main_menu %}
+        <a href="{{config.base_url ~ s.link}}">{{s.name}}</a>
+        {% endfor %}
+      </nav>
+      <h1 id="home-title">{{section.title}}</h1>
+      <p id="home-subtitle">{{section.description}}</p>
+      <div id="home-social">
+        {{macros::render_social_icons()}}
+      </div>
+      {% endblock title %}
+      {% block main %} {% endblock main %}
 	  </div>
 	  
 	  {% block footer %}
@@ -79,28 +47,30 @@
         onload="renderMathInElement(document.body, { delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
 
     {% if config.extra.highlightjs.enable %}
-		<link href="https://unpkg.com/highlightjs-badge/highlightjs/styles/{{config.extra.highlightjs.theme}}.css" rel="stylesheet">
-		<!-- https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/  for min version -->
-		<script src="https://unpkg.com/highlightjs-badge/highlightjs/highlight.pack.js"></script>
-		<script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script>
-		<script>
-			var pres = document.querySelectorAll("pre>code");
-			for (var i = 0; i < pres.length; i++) {
-				hljs.highlightBlock(pres[i]);
-			}
-		</script>
-		{% if config.extra.highlightjs.clipboard %}
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
-			<script>
-				var options = {
-					copyIconClass: "gg-clipboard",
-					checkIconClass: "gg-check"
-				};
-				window.highlightJsBadge(options);
-			</script>
-		{% endif %}
+      <!-- <link href="https://unpkg.com/highlightjs-badge/highlightjs/styles/{{config.extra.highlightjs.theme}}.css" rel="stylesheet"> -->
+      <!-- https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/  for min version -->
+      <!-- <script src="https://unpkg.com/highlightjs-badge/highlightjs/highlight.pack.js"></script>
+      <script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script> -->
 
-	{% endif %}
+      <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/base16/{{config.extra.highlightjs.theme}}.css">
+      <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+      <script>
+        var pres = document.querySelectorAll("pre>code");
+        for (var i = 0; i < pres.length; i++) {
+          hljs.highlightBlock(pres[i]);
+        }
+      </script>
+      {% if config.extra.highlightjs.clipboard %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+        <script>
+          var options = {
+            copyIconClass: "gg-clipboard",
+            checkIconClass: "gg-check"
+          };
+          window.highlightJsBadge(options);
+        </script>
+      {% endif %}
+    {% endif %}
 
 	{% if not config.extra.highlightjs.enable %}
 	<script src="{{get_url(path="js/copy.js")}}"></script>
@@ -119,6 +89,6 @@
      gtag('js', new Date());
      gtag('config', '{{ config.extra.google_analytics.id }}');
     </script>
-    {% endif %}
+  {% endif %}
   </body>
 </html>

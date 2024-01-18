@@ -16,4 +16,4 @@ Some of my links:
 
 ### colophon
 
-This site is built using [zola](https://github.com/getzola/zola) a static site generator written in Rust. It uses *heavily modified version* of hermit-zola theme. All the content is licensed under CC BY-NC. 
+This site is built using [zola](https://github.com/getzola/zola) a static site generator written in Rust :crab:. It uses *heavily modified version* of [hermit-zola](https://github.com/VersBinarii/hermit_zola) theme. All the content is licensed under CC BY-NC 4.0. 

@@ -2,7 +2,7 @@
 title = "Arch Installation"
 description = "The Adventure of Installing Arch."
 date = 2023-12-31
-draft = false
+draft = true 
 
 [taxonomies]
 tags = ["linux", "installation"]
@@ -44,4 +44,4 @@ I'll create three partition for the system such as;
 * 8G for swap
 * Remaining in my case its 470G for the root(/) file system.
 
-then format the drives and then do pacstrap for installing system base packages.
+"then format the drives and then do pacstrap for installing system base packages."

@@ -32,9 +32,10 @@ home_subtitle = "Learning to build things."
 footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
 main_menu = [
-    { link = "/", name = "home" },
-    { link = "/blog", name = "blog" },
-    { link = "/about", name = "about" }
+    { link = "/", name = "/home" },
+    { link = "/blog", name = "/blog" },
+    { link = "/about", name = "/about" },
+    { link = "/resume", name = "/resume" }
 ]
 
 socials = [
@@ -47,7 +48,7 @@ socials = [
 [extra.highlightjs]
 enable = true
 clipboard = false 
-theme = "twilight"
+theme = "ros-pine"
 
 [extra.author]
 name = "ktsh.in"
