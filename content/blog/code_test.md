@@ -5,9 +5,6 @@ draft=false
 
 [taxonomies]
 tags=["test", "code"]
-
-[extra]
-disable_comments = true
 +++
 
 ```rust
