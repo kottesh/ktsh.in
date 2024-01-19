@@ -1,9 +1,10 @@
 +++
-title="Latest Post"
-date=2019-08-25
-draft=false
+title = "Latest Post"
+date = 2019-08-25
+draft = true
+
 [taxonomies]
-tags=["hello", "blog", "later"]
+tags = ["hello", "blog", "later"]
 +++
 
 

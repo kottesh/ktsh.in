@@ -3,17 +3,17 @@ title = "About"
 description = "A few things about me"
 +++
 
-I'm Shree Kottes, also found as **@kottesh**/**@criptr** in the corners of Internet. An undergrad student currently based in Coimbatore, India. I have my interests around Systems Engineering, SRE.
+I'm Shree Kottes, you may find me as **@criptr** or **@kottesh** on the Internet. An undergraduate student currently based in Coimbatore, India. I have my interests around Systems Engineering, SRE.
 
-I am currently learning about containers(linux-based) and their internal mechanisms "docker" particularly.
+**Now:** Jan 2024  
+Currently learning about [containerization](https://www.ibm.com/topics/containerization) and their internal mechanisms.
 
-Some of my links:
+some of my links:
 
 * GitHub [@kottesh](https://github.com/kottesh)
 * X [@shreekottes](https://x.com/shreekottes)
-* LinkedIn [@shreekottes](https://linkedin.com/in/shreekottes)
 * Discord @criptr
 
-### colophon
+## colophon
 
-This site is built using [zola](https://github.com/getzola/zola) a static site generator written in Rust :crab:. It uses *heavily modified version* of [hermit-zola](https://github.com/VersBinarii/hermit_zola) theme. All the content is licensed under CC BY-NC 4.0. 
+This site is built using [zola](https://github.com/getzola/zola) a static site generator written in Rust. It uses the *heavily modified version* of [hermit-zola](https://github.com/VersBinarii/hermit_zola). All the content is licensed under CC BY-NC 4.0.

@@ -1,7 +1,7 @@
 +++
 title = "Hello Mars"
-description = "Testing out blog."
-date = 2023-12-01
+description = "Setting up Zola"
+date = 2024-01-10
 slug = "hello-mars"
 draft = false
 

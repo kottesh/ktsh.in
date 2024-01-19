@@ -1,9 +1,9 @@
 +++
-title="This is a good first post"
-date=2019-08-23
-draft=false
+title = "This is a good first post"
+date = 2019-08-23
+draft = true
 [taxonomies]
-tags=["hello", "blog", "first"]
+tags = ["hello", "blog", "first"]
 +++
 
 So i went there and did all that but as you know:
